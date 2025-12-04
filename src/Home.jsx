@@ -13,7 +13,7 @@ function Home(){
             </div>
             <div className='flex justify-center gap-5 size'>
             <div className='flex flex-col justify-center'>
-                <h2 className='text-3xl text-violet-900 underline underline-offset-10 font-serif'>DR. Meghnad Saha</h2><p className='m-2 font-bold'>(6th Oct,1893 - 16Feb,1956)</p>
+                <h2 className='text-3xl text-violet-900 underline underline-offset-10 font-serif'>DR. Meghnad Saha</h2><p className='m-1 font-bold'>(6th Oct,1893 - 16Feb,1956)</p>
                 <p className='font-serif text-lg text-blue-700 my-2'>Dr. Meghnad Saha was a pioneering Indian astrophysicist whose groundbreaking Saha Ionization Equation transformed our understanding of stars and their spectra. A visionary scientist and nation-builder, he combined deep theoretical insight with a passion for scientific progress in India. His work laid the foundation for modern astrophysics and continues to inspire researchers around the world. Dr. Saha’s legacy shines brightly—much like the stars he devoted his life to understanding.</p>
             </div>
             <img src={HomeImage2} className="object-fit rounded-md image1" alt="MSIT-image1" />
