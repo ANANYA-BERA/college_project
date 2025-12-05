@@ -1,4 +1,9 @@
-function Navbar(){
+function Navbar({ homeRef, aboutRef, contactRef }){
+
+    const scrollToSection = (ref) => {
+        ref.current.scrollIntoView({ behavior: "smooth" });
+      };
+    
     return(
             <header className="flex justify-between items-center rounded-md shadow-md">
                 <a class="relative px-6 py-3 font-medium text-white group">
@@ -10,11 +15,11 @@ function Navbar(){
                     <span class="relative text-3xl font-serif">MSIT</span>
                 </a>
                 <nav className="flex list-none gap-6 text-lg font-normal">
-                <a href="#_" class="px-5 py-2.5 font-medium bg-blue-50 hover:bg-blue-100 hover:text-blue-600 text-blue-500 rounded-lg text-sm">Home</a>
-                <a href="#_" class="px-5 py-2.5 font-medium bg-blue-50 hover:bg-blue-100 hover:text-blue-600 text-blue-500 rounded-lg text-sm">Notes</a>
-                <a href="#_" class="px-5 py-2.5 font-medium bg-blue-50 hover:bg-blue-100 hover:text-blue-600 text-blue-500 rounded-lg text-sm">About</a>
-                <a href="#_" class="px-5 py-2.5 font-medium bg-blue-50 hover:bg-blue-100 hover:text-blue-600 text-blue-500 rounded-lg text-sm">Contact</a>
-                <a href="#_" class="px-5 py-2.5 font-medium bg-blue-50 hover:bg-blue-100 hover:text-blue-600 text-blue-500 rounded-lg text-sm">Login</a>
+                <a onClick={() => scrollToSection(homeRef)} class="px-5 py-2.5 font-medium bg-blue-50 hover:bg-blue-100 hover:text-blue-600 text-blue-500 rounded-lg text-sm">Home</a>
+                <a onClick={() => scrollToSection(aboutRef)}  class="px-5 py-2.5 font-medium bg-blue-50 hover:bg-blue-100 hover:text-blue-600 text-blue-500 rounded-lg text-sm">About</a>
+                <a onClick={() => scrollToSection(contactRef)}  class="px-5 py-2.5 font-medium bg-blue-50 hover:bg-blue-100 hover:text-blue-600 text-blue-500 rounded-lg text-sm">Contact</a>
+                {/* <a onClick={() => scrollToSection(noteRef)} class="px-5 py-2.5 font-medium bg-blue-50 hover:bg-blue-100 hover:text-blue-600 text-blue-500 rounded-lg text-sm">Notes</a> */}
+                {/* <a onClick={() => scrollToSection(homeRef)}  class="px-5 py-2.5 font-medium bg-blue-50 hover:bg-blue-100 hover:text-blue-600 text-blue-500 rounded-lg text-sm">Login</a> */}
                 </nav>
             </header>
       );

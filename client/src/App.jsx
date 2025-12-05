@@ -1,19 +1,24 @@
-import { useState } from 'react'
+import { use, useRef } from 'react'
 import './App.css'
 import Navbar from './Navbar'
 import Home from './Home'
 import Notice from './Notice'
 import About from './About'
 import Footer from './Footer'
+import Contact from './Contact'
 
 function App() {
+  const homeRef = useRef(null)
+  const aboutRef = useRef(null)
+  const contactRef = useRef(null)
   
   return (
     <>
-      <Navbar />
+      <Navbar homeRef={homeRef} aboutRef={aboutRef} contactRef={contactRef} />
       <Notice />
-      <Home />
-      <About />
+      <section ref={homeRef}><Home /></section>
+      <section ref={aboutRef}><About /></section>
+      <section ref={contactRef}><Contact /></section>
       <Footer />
     </>
   )

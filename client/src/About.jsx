@@ -1,7 +1,6 @@
 function About(){
     return(
-        <div className="text-center px-10 m-5">
-            <h2 className="text-violet-900 font-serif font-bold bg-blue-200 p-2 rounded-lg m-5 text-3xl shadow-md">About</h2>
+        <div className="text-center px-10 py-5 m-5">
             <div className="flex px-8 gap-15 my-12">
             <img className="w-1/2 h-auto rounded-lg image1" src="https://www.drmsithaldia.in/themes/images/carousel/banner2.jpg" alt="about-image" />
             <div>
