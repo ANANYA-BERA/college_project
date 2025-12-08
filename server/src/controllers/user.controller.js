@@ -167,5 +167,6 @@ const refreshAccessToken = asyncHandler(async(req, res) => {
 module.exports = {
     register,
     logIn,
-    logOut
+    logOut,
+    refreshAccessToken
 }
