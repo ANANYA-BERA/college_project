@@ -14,7 +14,7 @@ function Home(){
             </div>
             <div className='flex justify-center gap-5 size'>
             <div className='flex flex-col text-start'>
-                <h2 className='text-3xl text-violet-900 underline underline-offset-10' data-aos="fade-right">DR. Meghnad Saha</h2><p className='m-1 font-bold' data-aos="fade-left">(6th Oct,1893 - 16Feb,1956)</p>
+                <h2 className='text-3xl text-violet-900 underline underline-offset-10' data-aos="flip-down">DR. Meghnad Saha</h2><p className='m-1 font-bold' data-aos="fade-right">(6th Oct,1893 - 16Feb,1956)</p>
                 <p className='text-lg text-blue-700 my-2' data-aos="fade-right">Dr. Meghnad Saha was a pioneering Indian astrophysicist whose groundbreaking Saha Ionization Equation transformed our understanding of stars and their spectra. A visionary scientist and nation-builder, he combined deep theoretical insight with a passion for scientific progress in India. His work laid the foundation for modern astrophysics and continues to inspire researchers around the world. Dr. Saha’s legacy shines brightly—much like the stars he devoted his life to understanding.</p>
             </div>
             <img src={HomeImage2} className="object-fit rounded-md image1" alt="MSIT-image1" />
@@ -22,7 +22,7 @@ function Home(){
             <div className='flex px-3'>
                 <img className='w-2/4 rounded-md image1' src="https://hihshaldia.in/public/website/assets/images/backgrounds/vision.jpg" alt="vision" />
                 <div className='m-5 text-start text-blue-800'>
-                    <h2 className='font-bold text-sky-900 mx-5 text-2xl' data-aos="fade-right">Our Vision</h2>
+                    <h2 className='font-bold text-sky-900 mx-5 text-2xl' data-aos="slide-down">Our Vision</h2>
                     <div className='align-section p-2' data-aos="fade-left">
                         <img className='w-1/10' src={HomeImage3} alt="right" />
                         <p className='mx-2'>To deliver industry-relevant technical education that transforms students into skilled professionals ready for tomorrow's challenges.</p>
