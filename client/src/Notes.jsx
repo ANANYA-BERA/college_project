@@ -53,7 +53,7 @@ function Notes(){
                         <option value="5th Sem">5th Sem</option>
                         <option value="6th Sem">6th Sem</option>
                     </select>
-                    <button class="px-5 py-2.5 font-medium bg-green-900 hover:bg-red-500 hover:text-black text-blue-500 rounded-lg text-sm">Enter</button>
+                    <button class="px-5 py-2.5 font-medium bg-blue-500 hover:bg-red-500 hover:text-violet-900 text-black rounded-lg text-sm">Enter</button>
                 </div>
                 <div className="w-full border">
                     
