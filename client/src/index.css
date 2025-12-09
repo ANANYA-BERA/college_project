@@ -24,14 +24,13 @@ header{
     padding-bottom: 15rem;
 }
 
-.centerize{
+.centerize {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-left: 35rem;
 }
 
-.align-section{
+.align-section {
     display: flex;
     align-items: center;
     margin: 10px;
@@ -40,5 +39,5 @@ header{
 footer{
     height: auto;
     padding: 2rem 2rem 4rem;
-    background-color: rgb(9, 14, 64);
+    background-color: rgb(30, 33, 76);
 }
