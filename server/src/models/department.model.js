@@ -9,6 +9,10 @@ const departmentSchema = new Schema({
     year: {
         type: Number,
         required: true
+    },
+    isActive: {
+        type: Boolean,
+        default: true
     }
     
 }, { timestamps: true });

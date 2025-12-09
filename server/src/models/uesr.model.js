@@ -7,6 +7,11 @@ const userSchema = new Schema({
     userName: {
         type: String,
     },
+    role: {
+        type: String,
+        enum: ["Teacher", "Student"],
+        required: true
+    },
     email: {
         type: String,
         required: true
