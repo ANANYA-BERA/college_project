@@ -1,5 +1,8 @@
 import footerimage from './assets/footerimage.png'
-import { FaFacebook, FaYoutube , FaInstagram , FaTwitter } from "react-icons/fa"
+import { FaFacebook, FaYoutube , FaTwitter , FaPhone } from "react-icons/fa"
+import { FaLocationDot } from "react-icons/fa6"
+import { MdEmail } from "react-icons/md";
+
 
 function Footer(){
 
@@ -11,17 +14,33 @@ function Footer(){
 
     return(
         <footer className='text-center  font-serif'>
-            <div className='flex gap-25 py-7'>
+            <div className='flex gap-20 py-7'>
             <div>
                 <img className="h-20 rounded-md" src={footerimage} alt="footer-image" />
-                <div className='flex flex-row text-3xl rounded p-5 gap-5'>
+                <div className='flex text-3xl rounded p-5 gap-5'>
                     {icons.map( (obj,index) => (<a key={index} href={obj.link} target='_blank' rel='noopener noreferrer' className={obj.design}>{obj.icon}</a>))}
                 </div>
             </div>
-            <div>
-                <h2 className='text-start text-white font-bold'>Contact</h2>
-                <li className='text-blue-200 text-sm my-1 hover:text-blue-300'>Department of Computer Science Technology</li>
-                <li className='text-blue-200 text-sm my-1 hover:text-blue-300'>Department of Computer Science Technology</li>
+            <div className='flex flex-col gap-5'>
+                <h2 className='text-start text-violet-400 text-xl font-bold'>Contact</h2>
+                <div className='flex items-center gap-3' data-aos="fade-left">
+                    <div className='p-3 border rounded-4xl bg-white hover:bg-blue-100'>
+                        <FaPhone className="text-blue-900 text-xl rotate-105 hover:text-green-700" />
+                    </div>
+                    <a className="font-bold text-blue-100 hover:text-blue-200 cursor-pointer" href="tel:" target="_blank" rel="noopener noreferrer">&nbsp;03224-253064</a>
+                </div>
+                <div className='flex items-center gap-3' data-aos="fade-left">
+                    <div className='p-3 border rounded-4xl bg-white hover:bg-blue-100'>
+                        <FaLocationDot className="text-blue-900 text-xl hover:text-green-700" />
+                    </div>
+                    <a className="font-bold text-sm text-blue-100 hover:text-blue-200 cursor-pointer" href="tel:" target="_blank" rel="noopener noreferrer">&nbsp;Debhog,Haldia Pin-721657,Purba Medinipur,WB,India</a>
+                </div>
+                <div className='flex items-center gap-3' data-aos="fade-left">
+                    <div className='p-3 border rounded-4xl bg-white hover:bg-blue-100'>
+                        <MdEmail className="text-blue-900 text-xl hover:text-green-700" />
+                    </div>
+                    <a className="font-bold text-blue-100 hover:text-blue-200 cursor-pointer" href="tel:" target="_blank" rel="noopener noreferrer">&nbsp;drmsithaldia.tpc@gmail.com</a>
+                </div>
             </div>
             </div>
             <hr className='h-1 bg-white' />
