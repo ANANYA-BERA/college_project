@@ -9,7 +9,8 @@ function Student(){
                 <form action="submit" className="flex flex-col items-center gap-5">
                     <input type="text" style={inputstyle} placeholder="Enter Your Registration N0" />
                     <input type="text" style={inputstyle} placeholder="Enter Mobile No" />
-                    <button className="bg-[#6495ED] hover:bg-blue-600" style={buttonstyle}>Enter</button>
+                    <button className="bg-[#6495ED] hover:bg-blue-600" style={buttonstyle}>Log IN</button>
+                    <div className="flex"><p>Have an Account ?</p><Link to='/studentregistration' className="font-bold text-blue-500 hover:text-blue-600">&nbsp;Sign UP</Link></div>
                 </form>
             </div>
         </div>
