@@ -44,7 +44,7 @@ function Footer(){
             </div>
             </div>
             <hr className='h-1 mt-8 bg-white' />
-            <p className='my-5 text-white'>&copy; 2025 Dr. Meghnad Saha Institute of Technology, Haldia. Allrights Reserved. Website Design & Maintain by WEB Informatics</p>
+            <p className='my-5 text-white'>&copy; 2025 Dr. Meghnad Saha Institute of Technology, Haldia. Allrights Reserved.</p>
         </footer>
     )
 }
