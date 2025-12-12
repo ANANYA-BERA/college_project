@@ -15,6 +15,15 @@ function Registration(){
                     <input type="text" style={inputstyle} placeholder="Enter Your Email" />
                     <input type="text" style={inputstyle} placeholder="Enter Password" />
                     <input type="text" style={inputstyle} placeholder="Confirm Password" />
+                    <select className="p-2 bg-blue-200 rounded font-md text-blue-950 focus:outline focus:outline-violet-500" value={department} onChange={departmentchange}>
+                        <option value="">Select Department</option>
+                        <option value="DCST">DCST</option>
+                        <option value="DCHI">DCHI</option>
+                        <option value="DEIE">DEIE</option>
+                        <option value="DEE">DEE</option>
+                        <option value="DEE">DEE</option>
+                        <option value="DEE">DEE</option>
+                    </select>
                     <button style={buttonstyle} className="bg-[#6495ED] hover:bg-blue-600 duration-200">Sign UP</button>
                     <div className="flex"><p className="text-gray-600">Have an Account ?</p><Link to='/admin' className="font-bold text-blue-500 hover:text-blue-600">&nbsp;Log IN</Link></div>
                 </form>
