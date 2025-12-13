@@ -23,7 +23,7 @@ const register = asyncHandler(async(req, res) => {
         throw new apiError(400, "Email or registration number is needed..");
     }
 
-    const existingUser = await User.find({$or: [{email}, {registrationNumber}]});
+    const existingUser = await User.findOne({$or: [{email}, {registrationNumber}]});
 
     if (existingUser) {
         throw new apiError(400, "User already exists..");
@@ -67,17 +67,19 @@ const logIn = asyncHandler(async(req, res) => {
         throw new apiError(400, "email or registration number is required..");
     }
 
-    const user = await User.find({$or: [{email}, {registrationNumber}]});
+    if (!password) {
+        throw new apiError(400, "Password is required..");
+    }
+
+    const user = await User.findOne({$or: [{email}, {registrationNumber}]});
     if (!user) {
         throw new apiError(400, "Register first..");
     }
 
-    if (password) {
-        const isPasswordValid = await user.isPasswordCorrect(password);
-        if (!isPasswordValid) {
-            throw new apiError(400, "Incorrect password..");
-        }
-    };
+    const isPasswordValid = await user.isPasswordCorrect(password);
+    if (!isPasswordValid) {
+        throw new apiError(400, "Incorrect password..");
+    }
 
     const { accessToken, refreshToken } = await generateAccessAndRefreshToken(user._id);
 
