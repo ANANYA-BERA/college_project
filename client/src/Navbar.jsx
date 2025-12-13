@@ -4,9 +4,9 @@ function Navbar(){
 
     const baseStyle = "px-5 py-2.5 font-medium rounded-lg text-sm";
 
-    const activeStyle = "bg-blue-600 text-white";
+    const activeStyle = "bg-violet-600 text-white";
 
-    const inactiveStyle = "bg-blue-50 text-blue-500 hover:bg-blue-100 hover:text-blue-600";
+    const inactiveStyle = "bg-blue-100 text-blue-500 hover:bg-blue-200 hover:text-blue-600";
 
     
     return(

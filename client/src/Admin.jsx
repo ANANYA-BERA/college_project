@@ -1,5 +1,5 @@
-import { MdBackupTable } from "react-icons/md"
 import { Link } from "react-router-dom"
+import { useForm } from "react-hook-form"
 
 export const h2style = {
     color: "blue",
@@ -33,7 +33,10 @@ function Admin(){
                     <input className="placeholder:text-gray-500 text-blue-800 focus:outline focus:outline-violet-500" type="text" style={inputstyle} placeholder="Enter Your Email" />
                     <input className="placeholder:text-gray-500 text-blue-800 focus:outline focus:outline-violet-500" type="text" style={inputstyle} placeholder="Enter Password" />
                     <button className="bg-[#212edf] hover:bg-purple-600 duration-500" style={buttonstyle}>Log IN</button>
-                    <div className="flex"><p className="text-gray-600">Create Account ?</p><Link to='/registration' className="font-bold text-blue-500 hover:text-blue-600">&nbsp;Sign UP</Link></div>
+                    <div className="flex">
+                        <p className="text-gray-600">Create Account ?</p>
+                        <Link to='/registration' className="font-bold text-blue-500 hover:text-blue-600">&nbsp;Sign UP</Link>
+                    </div>
                 </form>
             </div>
         </div>
