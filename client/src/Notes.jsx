@@ -1,4 +1,5 @@
 import { useState } from "react"
+export const selectstyle = "p-2 bg-blue-200 rounded font-md text-blue-950 focus:outline focus:outline-violet-500"
 
 function Notes(){
     const [sem,setSem] = useState("")
@@ -19,7 +20,7 @@ function Notes(){
             </div>
             <div className="flex justify-between p-2">
                 <div className="flex flex-col gap-5 m-5 padding-bottom">
-                    <select className="p-2 bg-blue-200 rounded font-md text-blue-950 focus:outline focus:outline-violet-500" value={sem} onChange={setChange}>
+                    <select className={selectstyle} value={sem} onChange={setChange}>
                         <option value="">Select Sem</option>
                         <option value="1st Sem">1st Sem</option>
                         <option value="2nd Sem">2nd Sem</option>

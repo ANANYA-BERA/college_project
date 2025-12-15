@@ -9,15 +9,12 @@ header{
 .homepage{
     align-items: center;
     padding: 0 20px;
-    margin-bottom: 3rem;
+    margin-bottom: 1rem;
 }
 
-.size{
-    height: 70vh;
-    padding: 1rem 1.8rem;
-}
 
 .image1{
+    border-radius: 10px;
     box-shadow: 0 10px 20px rgb(101, 99, 99);
 }
 
@@ -31,12 +28,6 @@ header{
     background: linear-gradient(to right, rgb(9, 9, 104), rgb(167, 25, 233));
 }
 
-.centerize {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
 .align-section {
     display: flex;
     align-items: center;
@@ -45,7 +36,6 @@ header{
 
 .shadow{
     box-shadow: 0 1px 8px rgba(108, 121, 202, 0.573);
-   
 }
 
 

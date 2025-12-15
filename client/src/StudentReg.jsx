@@ -1,4 +1,4 @@
-import Admin,{ h2style,inputstyle,buttonstyle } from "./Admin"
+import { h2style,inputstyle,buttonstyle } from "./styles"
 import { Link } from "react-router-dom"
 import React,{useState} from "react"
 
