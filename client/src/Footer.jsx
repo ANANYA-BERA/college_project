@@ -2,10 +2,16 @@ import footerimage from './assets/footerimage.png'
 import { FaFacebook, FaYoutube , FaTwitter , FaPhone } from "react-icons/fa"
 import { FaLocationDot } from "react-icons/fa6"
 import { MdEmail } from "react-icons/md";
+import Home, {textalign} from './Home';
+import Contact,{maplink} from './Contact';
 
 
 function Footer(){
-
+    const contactsection = "flex items-center gap-3"
+    const iconsection = "p-3 border rounded-4xl bg-white hover:bg-yellow-50"
+    const iconhover = "text-blue-900 text-xl hover:text-green-700 transition-transform duration-300 hover:scale-130"
+    const texthover = "font-bold text-blue-100 hover:text-gray-50 cursor-pointer"
+    
     const icons = [
         {icon: <FaFacebook />,link: "https://www.facebook.com/www.drmsithaldia.org/",design: "text-gray-100 hover:text-blue-200 transition"},
         {icon: <FaYoutube />,link: "https://www.youtube.com/",design: "text-red-600 hover:text-red-700 transition"},
@@ -13,30 +19,30 @@ function Footer(){
     ]
 
     return(
-        <footer className='text-center font-serif'>
+        <footer className='font-serif'>
             <div className='flex justify-between py-5 px-8'>
             <div>
-                <img className="h-20 rounded-xl px-3" src={footerimage} alt="footer-image" />
+                <img className="h-20 px-3" src={footerimage} alt="footer-image" />
             </div>
-            <div className='flex flex-col gap-3'>
+            <div className={textalign} style={{gap: "8px"}}>
                 <h2 className='text-start text-blue-50 text-xl font-bold'>Contact</h2>
-                <div className='flex items-center gap-3'>
-                    <div className='p-3 border rounded-4xl bg-white hover:bg-yellow-50'>
-                        <FaPhone className="text-blue-900 text-xl rotate-105 hover:text-green-700 transition-transform duration-300 hover:scale-130" />
+                <div className={contactsection}>
+                    <div className={iconsection}>
+                        <FaPhone className={iconhover} />
                     </div>
-                    <a className="font-bold text-blue-100 hover:text-gray-50 cursor-pointer font-sans" href="tel:" target="_blank" rel="noopener noreferrer">&nbsp;03224-253064</a>
+                    <a className={`${texthover} font-sans`} href="tel:03224-253064" target="_blank" rel="noopener noreferrer">&nbsp;03224-253064</a>
                 </div>
-                <div className='flex items-center gap-3'>
-                    <div className='p-3 border rounded-4xl bg-white hover:bg-yellow-50'>
-                        <FaLocationDot className="text-blue-900 text-xl hover:text-green-700 transition-transform duration-300 hover:scale-130" />
+                <div className={contactsection}>
+                    <div className={iconsection}>
+                        <FaLocationDot className={iconhover} />
                     </div>
-                    <a className="font-bold text-sm text-blue-100 hover:text-gray-50 cursor-pointer" href="tel:" target="_blank" rel="noopener noreferrer">&nbsp;Debhog,Haldia Pin-721657,<br/>Purba Medinipur,WB,India</a>
+                    <a className={texthover} href={maplink} target="_blank" rel="noopener noreferrer">&nbsp;Debhog,Haldia Pin-721657,<br/>Purba Medinipur,WB,India</a>
                 </div>
-                <div className='flex items-center gap-3'>
-                    <div className='p-3 border rounded-4xl bg-white hover:bg-yellow-50'>
-                        <MdEmail className="text-blue-900 text-xl hover:text-green-700 transition-transform duration-300 hover:scale-130" />
+                <div className={contactsection}>
+                    <div className={iconsection}>
+                        <MdEmail className={iconhover} />
                     </div>
-                    <a className="font-bold text-blue-100 hover:text-gray-50 cursor-pointer" href="tel:" target="_blank" rel="noopener noreferrer">&nbsp;drmsithaldia.tpc@gmail.com</a>
+                    <a className={texthover} href="tel:" target="_blank" rel="noopener noreferrer">&nbsp;drmsithaldia.tpc@gmail.com</a>
                 </div>
             </div>
             <div className='flex text-4xl rounded p-5 gap-5 '>
@@ -44,7 +50,7 @@ function Footer(){
                 </div>
             </div>
             <hr className='h-1 mt-8 bg-white' />
-            <p className='my-5 text-white'>&copy; 2025 Dr. Meghnad Saha Institute of Technology, Haldia. Allrights Reserved.</p>
+            <p className='my-5 text-center text-white'>&copy; 2025 Dr. Meghnad Saha Institute of Technology, Haldia. Allrights Reserved.</p>
         </footer>
     )
 }

@@ -1,4 +1,6 @@
 import { useState } from "react"
+import SectionHeading from "./SectionHeading"
+import Registration,{ buttonhover, selectsection } from "./Registration"
 
 function Notes(){
     const [sem,setSem] = useState("")
@@ -8,18 +10,10 @@ function Notes(){
 
     return(
         <div className="px-10 py-5 font-serif">
-            <div className="relative w-fit mx-7 rounded-tl-md rounded-br-md gradient">
-            <h2 className="text-white font-bold text-lg p-3 uppercase">
-                Notes
-            </h2>
-            <span className="absolute -top-1 -right-1 flex">
-                <span className="absolute inline-flex h-5 w-5 animate-ping rounded-full bg-sky-300 opacity-75"></span>
-                <span className="relative inline-flex h-5 w-5 rounded-full bg-sky-400"></span>
-            </span>
-            </div>
+            <SectionHeading categories="NOTES" />
             <div className="flex justify-between p-2">
                 <div className="flex flex-col gap-5 m-5 padding-bottom">
-                    <select className="p-2 bg-blue-200 rounded font-md text-blue-950 focus:outline focus:outline-violet-500" value={sem} onChange={setChange}>
+                    <select className={selectsection} value={sem} onChange={setChange}>
                         <option value="">Select Sem</option>
                         <option value="1st Sem">1st Sem</option>
                         <option value="2nd Sem">2nd Sem</option>
@@ -28,7 +22,7 @@ function Notes(){
                         <option value="5th Sem">5th Sem</option>
                         <option value="6th Sem">6th Sem</option>
                     </select>
-                    <button class="px-5 py-2 font-semibold bg-blue-800 hover:bg-blue-500  text-white rounded-xl text-lg">Enter</button>
+                    <button class={buttonhover} style={{padding: "4px 5px",borderRadius: "5px"}}>Enter</button>
                 </div>
                 <div className="w-full border">
                     
