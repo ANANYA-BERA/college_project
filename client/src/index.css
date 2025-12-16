@@ -34,6 +34,12 @@ header{
     margin: 10px;
 }
 
+
+.formborder{
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px rgba(126, 127, 131, 0.573);
+}
+
 .shadow{
     box-shadow: 0 1px 8px rgba(108, 121, 202, 0.573);
 }

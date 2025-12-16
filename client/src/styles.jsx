@@ -1,22 +1,23 @@
 export const h2style = {
     color: "blue",
-    fontSize: "1.5rem"
+    fontSize: "1.5rem",
+    fontWeight: "bold",
+    textAlign: "center"
 }
 
 export const inputstyle = {
     padding: "5px 10px",
     backgroundColor: "white",
-    borderRadius: "10px",
+    borderRadius: "6px",
+    border: "1px solid #64B5F6",
     width: "100%",
     fontSize:"16px",
     color:"navy",
-    boxShadow:"0 1px 6px rgba(98, 125, 215, 0.626)"
-
 }
 
 export const buttonstyle = {
     padding: "5px 30px",
-    borderRadius: "20px",
+    borderRadius: "5px",
     color: "white",
 }
 
