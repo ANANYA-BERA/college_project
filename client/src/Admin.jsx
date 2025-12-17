@@ -1,15 +1,30 @@
 import { Link } from "react-router-dom"
-import { h2style, inputstyle, buttonstyle } from "./styles"
-import Registration,{firstSection,secondSection,buttonhover,changehover, formsection} from "./Registration"
+import {h2style, inputstyle, buttonstyle,firstSection,secondSection,buttonhover,changehover,formsection} from "./styles"
+import { useForm } from "react-hook-form"
+import Errormessage from './errorsmessage'
+
 
 function Admin(){
+    const {
+        register,
+        handleSubmit,
+        formState: { errors },
+    } = useForm({mode: "onChange"});
+
+    const errormessages = 
+        errors.email?.message || errors.password?.message || "";
+    
+
+    const onSubmit = (data) => console.log(data)
+
     return(
         <div className={firstSection}>
             <div className={secondSection}>
                 <h2 style={h2style}>Sign IN</h2>
-                <form action="submit" className={formsection}>
-                    <input type="text" style={inputstyle} placeholder="Enter Your Email" />
-                    <input type="text" style={inputstyle} placeholder="Enter Password" />
+                <form className={formsection} onSubmit={handleSubmit(onSubmit)}>
+                    <Errormessage error={errormessages && {message: errormessages}} />
+                    <input type="text" style={inputstyle} placeholder="Enter Your Email" {...register("email",{required: {value: true, message: "Email is Required"},pattern:{value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,message: "Enter a valid email dress"}})}/>
+                    <input type="text" style={inputstyle} placeholder="Enter Password" {...register("password",{required: {value: true,message: "Give your password"}})} />
                     <button className={buttonhover} style={buttonstyle}>Log IN</button>
                     <div className="flex">
                         <p className="text-gray-600">Create Account ?</p>

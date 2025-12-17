@@ -1,16 +1,25 @@
-import { h2style,inputstyle,buttonstyle } from "./styles"
 import { Link } from "react-router-dom"
-import Registration,{firstSection,secondSection,buttonhover,changehover, formsection} from "./Registration"
+import {h2style,inputstyle,buttonstyle,firstSection,secondSection,buttonhover,changehover,formsection} from "./styles"
+import { useForm } from 'react-hook-form'
+import Errormessage from "./errorsmessage";
 
 
 function Student(){
+    const {register,
+        handleSubmit,
+        formState: { errors },
+    } = useForm({mode: "onChange"});
+
+    const onSubmit = (data) => console.log(data)
+    const errormessages = errors.registration?.message || "";
+
     return(
         <div className={firstSection}>
             <div className={secondSection}>
                 <h2 className="text-center font-bold" style={h2style}>Student Login</h2>
-                <form action="submit" className={formsection}>
-                    <input type="text" style={inputstyle} placeholder="Enter Your Registration N0" />
-                    <input type="text" style={inputstyle} placeholder="Enter Mobile No" />
+                <form className={formsection} onSubmit={handleSubmit(onSubmit)}>
+                    <Errormessage error={errormessages && {message: errormessages}} />
+                    <input type="text" style={inputstyle} placeholder="Enter Your Registration N0" {...register("registration", {required: {value: true,message: "The Field is Required"},validate: value => value.length === 10 || "Registration no must have 10 chracters"})} />
                     <button className={buttonhover} style={buttonstyle}>Enter</button>
                     <div className="flex">
                         <p className="text-gray-600">Create Account ?</p>
