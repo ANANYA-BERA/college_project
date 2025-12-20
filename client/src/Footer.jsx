@@ -2,8 +2,8 @@ import footerimage from './assets/footerimage.png'
 import { FaFacebook, FaYoutube , FaTwitter , FaPhone } from "react-icons/fa"
 import { FaLocationDot } from "react-icons/fa6"
 import { MdEmail } from "react-icons/md";
-import Home, {textalign} from './Home';
-import Contact,{maplink} from './Contact';
+import {textalign,maplink} from './styles';
+
 
 
 function Footer(){

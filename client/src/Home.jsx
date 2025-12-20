@@ -1,11 +1,8 @@
 import HomeImage1 from './assets/meghnad_saha.jpg'
 import HomeImage2 from './assets/meghnad_saha_statue.jpg'
 import HomeImage3 from './assets/right_10023784.png'
+import { aligncontainer,textalign,headingstyle,pstyle } from './styles'
 
-export const aligncontainer = "flex justify-center gap-8"
-export const textalign = "flex flex-col text-start"
-export const headingstyle = "text-3xl text-blue-900 underline underline-offset-5"
-export const pstyle = "text-lg text-black"
 
 function Home(){
     const alignright = "align-section p-2 gap-3"
