@@ -88,6 +88,7 @@ const getNoteById = asyncHandler(async(req, res) => {
     if (!note) {
         throw new apiError(404, "No such note found..");
     }
+    console.log(note);
 
     return res.status(200).json(
         new apiResponse(200, note, "Fetched successfully..")
