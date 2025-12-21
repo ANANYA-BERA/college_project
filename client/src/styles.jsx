@@ -24,8 +24,8 @@ export const buttonstyle = {
 }
 
 //home ,about
-export const aligncontainer = "flex justify-center gap-8"
-export const textalign = "flex flex-col text-start"
+export const aligncontainer = "flex justify-center gap-5 h-[70vh] mb-5"
+export const textalign = "flex flex-col text-start gap-1"
 export const headingstyle = "text-3xl text-blue-900 underline underline-offset-5"
 export const pstyle = "text-lg text-black"
 
