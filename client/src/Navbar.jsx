@@ -20,7 +20,7 @@ function Navbar(){
 
                     <span className="relative font-serif text-xs sm:text-sm md:text-base leading-tight">
                         Dr. Meghnad Saha <br />
-                        Institute of Technology, Haldia
+                        Institute of Technology
                     </span>
                 </a>
 
